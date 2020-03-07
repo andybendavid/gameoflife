@@ -33,11 +33,6 @@ function getRandomColor() {
 }
  
 function run() {
-    createTable();
-    reset();    
-}
-
-function createTable() {
     var GOL = document.getElementById('GOL');
     var table = document.createElement("table");
     
@@ -53,18 +48,14 @@ function createTable() {
         table.appendChild(tr);
     }
     GOL.appendChild(table);
-    }
-
-function reset() {
-
-    for (var i = 0; i < rows; i++) {
+        for (var i = 0; i < rows; i++) {
          box[i] = new Array(cols);
         newBox[i] = new Array(cols);
         for (var j = 0; j < cols; j++) {
             box[i][j] = 0;
             newBox[i][j] = 0;          
         }
-    }
+    } 
 }
 
     function cellClickHandler() {
